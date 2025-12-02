@@ -12,6 +12,7 @@
 
 #include "get_next_line.h"
 #include <sys/time.h>
+#include <stdio.h>
 
 int	main(int ac, char **av)
 {
@@ -26,6 +27,7 @@ int	main(int ac, char **av)
 		line = get_next_line(fd);
 	}
 	gettimeofday(&end, NULL);
-	printf("time spent ==> %ld\n", (end.tv_sec - start.tv_sec) * 1000 + (end.tv_usec - start.tv_usec) / 1000);
+	printf("time spent ==> %ld\n", (end.tv_sec - start.tv_sec)
+	* 1000 + (end.tv_usec - start.tv_usec) / 1000);
 	return (0);
 }

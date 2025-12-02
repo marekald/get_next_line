@@ -19,7 +19,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
+//# include <string.h> // creo que no lo uso
 # include <fcntl.h>
 # include <limits.h>
 
