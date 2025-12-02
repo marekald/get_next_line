@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
 static size_t	find_next_line_break(char *str, size_t i)
 {
