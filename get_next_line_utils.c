@@ -22,29 +22,6 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strcpy(char *dest, const char *src)
-{
-	char	*dest_start;
-
-	dest_start = dest;
-	while (*src)
-		*dest++ = *src++;
-	*dest = '\0';
-	return (dest_start);
-}
-
-char	*ft_strdup(const char *src)
-{
-	size_t	len;
-	char	*dest;
-
-	len = ft_strlen(src);
-	dest = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dest)
-		return (NULL);
-	return (ft_strcpy(dest, src));
-}
-
 char	*ft_strchr(char const *str, int c)
 {
 	if (!str)
