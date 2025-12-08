@@ -5,4 +5,4 @@ valgrind --leak-check=full \
          --show-leak-kinds=all \
          --track-origins=yes \
          --log-file=valgrind-out.txt \
-         ./a.out texto.txt
+         ./a.out texto.txt BUFFER_SIZE=1000000

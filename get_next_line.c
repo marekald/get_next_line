@@ -37,7 +37,7 @@ static char	*create_substring(char *str)
 	i = find_next_line_break(str, i);
 	new_str = (char *)malloc((ft_strlen(str) - i) + 1);
 	if (!new_str)
-		return (free(new_str), NULL);
+		return (free(str), NULL);
 	while (*(str + i))
 		*(new_str + j++) = *(str + i++);
 	*(new_str + j) = '\0';
@@ -74,12 +74,10 @@ static char	*read_line(char *str)
 	return (line);
 }
 
-static char	*free_and_null(char *buff1, char *buff2)
+void	free_buff(char *buff1, char *buff2)
 {
 	free(buff1);
 	free(buff2);
-	buff2 = NULL;
-	return (buff2);
 }
 
 char	*get_next_line(int fd)
@@ -99,7 +97,7 @@ char	*get_next_line(int fd)
 		read_bytes = read(fd, content_read, BUFFER_SIZE);
 		if (read_bytes == -1)
 		{
-			read_buffer = free_and_null(content_read, read_buffer);
+			free_buff(content_read, read_buffer);
 			return (NULL);
 		}
 		*(content_read + read_bytes) = '\0';
