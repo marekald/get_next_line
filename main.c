@@ -13,7 +13,6 @@
 #include "get_next_line.h"
 #include <stdio.h>
 
-// main debe tener un int como argumento asike ac es eso.
 int	main(int ac, char **av)
 {
 	int		fd;
