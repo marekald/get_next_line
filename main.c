@@ -24,6 +24,7 @@ int	main(int ac, char **av)
 	while (line)
 	{
 		printf ("%s", line);
+		free(line);
 		line = get_next_line(fd);
 	}
 	return (0);
